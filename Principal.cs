@@ -13,12 +13,14 @@ namespace Cinealdia
     public partial class Principal : Form
     {
         private Form activeForm;
-        public Principal()
+        
+        public Principal(String usuario)
         {
             InitializeComponent();
+            lb_usuario.Text = usuario;
            
         }
-
+        
         private void Principal_Load(object sender, EventArgs e)
         {
             esconderSubmenu();
@@ -74,7 +76,8 @@ namespace Cinealdia
 
         private void btn_addmovie_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new añadirPelicula(), sender);
+            String user = lb_usuario.Text;
+            OpenChildForm(new añadirPelicula(user), sender);
         }
 
         private void panelLogo_Click(object sender, EventArgs e)
@@ -86,5 +89,13 @@ namespace Cinealdia
         {
             OpenChildForm(new añadirserie(), sender);
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            String user = lb_usuario.Text;
+            OpenChildForm(new ListaPeliculas(user), sender);
+        }
+
+        
     }
 }
