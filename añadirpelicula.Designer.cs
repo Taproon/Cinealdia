@@ -29,50 +29,69 @@ namespace Cinealdia
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Director");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Compositor");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Productores");
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tx_bso = new System.Windows.Forms.TextBox();
+            this.tx_guionistas = new System.Windows.Forms.TextBox();
+            this.tx_director = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lb_usuario = new System.Windows.Forms.Label();
+            this.lb_error = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.imagen = new System.Windows.Forms.PictureBox();
+            this.cb_edad = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_tipo = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.label6 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.checked_generos = new System.Windows.Forms.CheckedListBox();
+            this.ch_venta = new System.Windows.Forms.CheckBox();
+            this.ch_quiero = new System.Windows.Forms.CheckBox();
+            this.ch_vista = new System.Windows.Forms.CheckBox();
+            this.ch_coleccion = new System.Windows.Forms.CheckBox();
+            this.numeric_duracion = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numeric_puntuacion = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tx_año = new System.Windows.Forms.TextBox();
+            this.tx_estudio = new System.Windows.Forms.TextBox();
+            this.tx_titulo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tx_personaje = new System.Windows.Forms.TextBox();
+            this.tx_apellidos = new System.Windows.Forms.TextBox();
+            this.tx_nombre = new System.Windows.Forms.TextBox();
+            this.btn_añadir = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.gridactores = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Personaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tx_comment = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.actoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aCTORESDataSet = new Cinealdia.ACTORESDataSet();
+            this.actoresTableAdapter = new Cinealdia.ACTORESDataSetTableAdapters.actoresTableAdapter();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric_duracion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric_puntuacion)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridactores)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.actoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aCTORESDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -89,29 +108,35 @@ namespace Cinealdia
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.tx_bso);
+            this.tabPage1.Controls.Add(this.tx_guionistas);
+            this.tabPage1.Controls.Add(this.tx_director);
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.lb_usuario);
+            this.tabPage1.Controls.Add(this.lb_error);
+            this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.button3);
-            this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Controls.Add(this.comboBox2);
+            this.tabPage1.Controls.Add(this.imagen);
+            this.tabPage1.Controls.Add(this.cb_edad);
             this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.comboBox1);
+            this.tabPage1.Controls.Add(this.cb_tipo);
             this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.treeView1);
             this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.checkedListBox1);
-            this.tabPage1.Controls.Add(this.checkBox4);
-            this.tabPage1.Controls.Add(this.checkBox3);
-            this.tabPage1.Controls.Add(this.checkBox2);
-            this.tabPage1.Controls.Add(this.checkBox1);
-            this.tabPage1.Controls.Add(this.numericUpDown2);
+            this.tabPage1.Controls.Add(this.checked_generos);
+            this.tabPage1.Controls.Add(this.ch_venta);
+            this.tabPage1.Controls.Add(this.ch_quiero);
+            this.tabPage1.Controls.Add(this.ch_vista);
+            this.tabPage1.Controls.Add(this.ch_coleccion);
+            this.tabPage1.Controls.Add(this.numeric_duracion);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.numericUpDown1);
+            this.tabPage1.Controls.Add(this.numeric_puntuacion);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.tx_año);
+            this.tabPage1.Controls.Add(this.tx_estudio);
+            this.tabPage1.Controls.Add(this.tx_titulo);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
@@ -123,6 +148,89 @@ namespace Cinealdia
             this.tabPage1.Text = "General";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // tx_bso
+            // 
+            this.tx_bso.Location = new System.Drawing.Point(216, 410);
+            this.tx_bso.Name = "tx_bso";
+            this.tx_bso.Size = new System.Drawing.Size(249, 20);
+            this.tx_bso.TabIndex = 59;
+            // 
+            // tx_guionistas
+            // 
+            this.tx_guionistas.Location = new System.Drawing.Point(216, 343);
+            this.tx_guionistas.Name = "tx_guionistas";
+            this.tx_guionistas.Size = new System.Drawing.Size(249, 20);
+            this.tx_guionistas.TabIndex = 58;
+            // 
+            // tx_director
+            // 
+            this.tx_director.Location = new System.Drawing.Point(216, 276);
+            this.tx_director.Name = "tx_director";
+            this.tx_director.Size = new System.Drawing.Size(249, 20);
+            this.tx_director.TabIndex = 57;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label12.Location = new System.Drawing.Point(284, 375);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(111, 16);
+            this.label12.TabIndex = 56;
+            this.label12.Text = "Banda Sonora:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label11.Location = new System.Drawing.Point(298, 313);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(81, 16);
+            this.label11.TabIndex = 55;
+            this.label11.Text = "Guionistas";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(306, 247);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(63, 16);
+            this.label10.TabIndex = 54;
+            this.label10.Text = "Director";
+            // 
+            // lb_usuario
+            // 
+            this.lb_usuario.AutoSize = true;
+            this.lb_usuario.Location = new System.Drawing.Point(30, 16);
+            this.lb_usuario.Name = "lb_usuario";
+            this.lb_usuario.Size = new System.Drawing.Size(43, 13);
+            this.lb_usuario.TabIndex = 53;
+            this.lb_usuario.Text = "Usuario";
+            // 
+            // lb_error
+            // 
+            this.lb_error.AutoSize = true;
+            this.lb_error.BackColor = System.Drawing.Color.Transparent;
+            this.lb_error.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_error.ForeColor = System.Drawing.Color.Red;
+            this.lb_error.Location = new System.Drawing.Point(38, 528);
+            this.lb_error.Name = "lb_error";
+            this.lb_error.Size = new System.Drawing.Size(265, 16);
+            this.lb_error.TabIndex = 52;
+            this.lb_error.Text = "Debes rellenar al menos el campo TITULO";
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(698, 519);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(137, 33);
+            this.button4.TabIndex = 51;
+            this.button4.Text = "Guardar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(726, 43);
@@ -133,29 +241,29 @@ namespace Cinealdia
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // pictureBox1
+            // imagen
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox1.Location = new System.Drawing.Point(537, 90);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(298, 399);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 49;
-            this.pictureBox1.TabStop = false;
+            this.imagen.BackColor = System.Drawing.Color.Gainsboro;
+            this.imagen.Location = new System.Drawing.Point(537, 90);
+            this.imagen.Name = "imagen";
+            this.imagen.Size = new System.Drawing.Size(298, 399);
+            this.imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imagen.TabIndex = 49;
+            this.imagen.TabStop = false;
             // 
-            // comboBox2
+            // cb_edad
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cb_edad.FormattingEnabled = true;
+            this.cb_edad.Items.AddRange(new object[] {
             "General",
             "PG-7",
             "PG-12",
             "PG-16",
             "PG-18"});
-            this.comboBox2.Location = new System.Drawing.Point(389, 473);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(76, 21);
-            this.comboBox2.TabIndex = 48;
+            this.cb_edad.Location = new System.Drawing.Point(389, 473);
+            this.cb_edad.Name = "cb_edad";
+            this.cb_edad.Size = new System.Drawing.Size(76, 21);
+            this.cb_edad.TabIndex = 48;
             // 
             // label9
             // 
@@ -167,19 +275,18 @@ namespace Cinealdia
             this.label9.TabIndex = 47;
             this.label9.Text = "Publico (edad):";
             // 
-            // comboBox1
+            // cb_tipo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cb_tipo.FormattingEnabled = true;
+            this.cb_tipo.Items.AddRange(new object[] {
             "Animación",
             "Pelicula",
             "Televisión",
-            "Trailer",
             "TV Serie"});
-            this.comboBox1.Location = new System.Drawing.Point(77, 473);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(157, 21);
-            this.comboBox1.TabIndex = 46;
+            this.cb_tipo.Location = new System.Drawing.Point(77, 473);
+            this.cb_tipo.Name = "cb_tipo";
+            this.cb_tipo.Size = new System.Drawing.Size(157, 21);
+            this.cb_tipo.TabIndex = 46;
             // 
             // label8
             // 
@@ -191,26 +298,6 @@ namespace Cinealdia
             this.label8.TabIndex = 45;
             this.label8.Text = "Tipo:";
             // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(442, 221);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(23, 23);
-            this.button2.TabIndex = 44;
-            this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(416, 221);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(23, 23);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -220,24 +307,6 @@ namespace Cinealdia
             this.label7.Size = new System.Drawing.Size(68, 16);
             this.label7.TabIndex = 42;
             this.label7.Text = "Plantilla:";
-            // 
-            // treeView1
-            // 
-            this.treeView1.LabelEdit = true;
-            this.treeView1.Location = new System.Drawing.Point(205, 247);
-            this.treeView1.Name = "treeView1";
-            treeNode4.Name = "Director";
-            treeNode4.Text = "Director";
-            treeNode5.Name = "Compositor";
-            treeNode5.Text = "Compositor";
-            treeNode6.Name = "Productores";
-            treeNode6.Text = "Productores";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode5,
-            treeNode6});
-            this.treeView1.Size = new System.Drawing.Size(260, 199);
-            this.treeView1.TabIndex = 41;
             // 
             // label6
             // 
@@ -249,79 +318,80 @@ namespace Cinealdia
             this.label6.TabIndex = 40;
             this.label6.Text = "Géneros:";
             // 
-            // checkedListBox1
+            // checked_generos
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.checked_generos.FormattingEnabled = true;
+            this.checked_generos.Items.AddRange(new object[] {
             "Acción",
             "Aventura",
+            "Comedia",
             "Ciencia-Ficción",
             "Crimen",
             "Drama",
             "Fantasía",
             "Thriller",
             "Terror"});
-            this.checkedListBox1.Location = new System.Drawing.Point(29, 247);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(153, 199);
-            this.checkedListBox1.TabIndex = 39;
+            this.checked_generos.Location = new System.Drawing.Point(29, 247);
+            this.checked_generos.Name = "checked_generos";
+            this.checked_generos.Size = new System.Drawing.Size(153, 199);
+            this.checked_generos.TabIndex = 39;
             // 
-            // checkBox4
+            // ch_venta
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.checkBox4.Location = new System.Drawing.Point(376, 185);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(89, 20);
-            this.checkBox4.TabIndex = 38;
-            this.checkBox4.Text = "En Venta";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.ch_venta.AutoSize = true;
+            this.ch_venta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ch_venta.Location = new System.Drawing.Point(376, 185);
+            this.ch_venta.Name = "ch_venta";
+            this.ch_venta.Size = new System.Drawing.Size(89, 20);
+            this.ch_venta.TabIndex = 38;
+            this.ch_venta.Text = "En Venta";
+            this.ch_venta.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // ch_quiero
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.checkBox3.Location = new System.Drawing.Point(263, 185);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(94, 20);
-            this.checkBox3.TabIndex = 37;
-            this.checkBox3.Text = "La Quiero";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.ch_quiero.AutoSize = true;
+            this.ch_quiero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ch_quiero.Location = new System.Drawing.Point(263, 185);
+            this.ch_quiero.Name = "ch_quiero";
+            this.ch_quiero.Size = new System.Drawing.Size(94, 20);
+            this.ch_quiero.TabIndex = 37;
+            this.ch_quiero.Text = "La Quiero";
+            this.ch_quiero.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // ch_vista
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.checkBox2.Location = new System.Drawing.Point(172, 185);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(62, 20);
-            this.checkBox2.TabIndex = 36;
-            this.checkBox2.Text = "Vista";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.ch_vista.AutoSize = true;
+            this.ch_vista.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ch_vista.Location = new System.Drawing.Point(172, 185);
+            this.ch_vista.Name = "ch_vista";
+            this.ch_vista.Size = new System.Drawing.Size(62, 20);
+            this.ch_vista.TabIndex = 36;
+            this.ch_vista.Text = "Vista";
+            this.ch_vista.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // ch_coleccion
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.checkBox1.Location = new System.Drawing.Point(29, 185);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(118, 20);
-            this.checkBox1.TabIndex = 35;
-            this.checkBox1.Text = "En Colección";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ch_coleccion.AutoSize = true;
+            this.ch_coleccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ch_coleccion.Location = new System.Drawing.Point(29, 185);
+            this.ch_coleccion.Name = "ch_coleccion";
+            this.ch_coleccion.Size = new System.Drawing.Size(118, 20);
+            this.ch_coleccion.TabIndex = 35;
+            this.ch_coleccion.Text = "En Colección";
+            this.ch_coleccion.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown2
+            // numeric_duracion
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(416, 91);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.numeric_duracion.Location = new System.Drawing.Point(416, 91);
+            this.numeric_duracion.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(49, 20);
-            this.numericUpDown2.TabIndex = 34;
-            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numeric_duracion.Name = "numeric_duracion";
+            this.numeric_duracion.Size = new System.Drawing.Size(49, 20);
+            this.numeric_duracion.TabIndex = 34;
+            this.numeric_duracion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -333,18 +403,18 @@ namespace Cinealdia
             this.label5.TabIndex = 33;
             this.label5.Text = "Duración (min):";
             // 
-            // numericUpDown1
+            // numeric_puntuacion
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(416, 56);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numeric_puntuacion.Location = new System.Drawing.Point(416, 56);
+            this.numeric_puntuacion.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(49, 20);
-            this.numericUpDown1.TabIndex = 32;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numeric_puntuacion.Name = "numeric_puntuacion";
+            this.numeric_puntuacion.Size = new System.Drawing.Size(49, 20);
+            this.numeric_puntuacion.TabIndex = 32;
+            this.numeric_puntuacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -356,26 +426,26 @@ namespace Cinealdia
             this.label4.TabIndex = 31;
             this.label4.Text = "Puntuación:";
             // 
-            // textBox3
+            // tx_año
             // 
-            this.textBox3.Location = new System.Drawing.Point(96, 132);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(56, 20);
-            this.textBox3.TabIndex = 30;
+            this.tx_año.Location = new System.Drawing.Point(96, 132);
+            this.tx_año.Name = "tx_año";
+            this.tx_año.Size = new System.Drawing.Size(56, 20);
+            this.tx_año.TabIndex = 30;
             // 
-            // textBox2
+            // tx_estudio
             // 
-            this.textBox2.Location = new System.Drawing.Point(96, 95);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(181, 20);
-            this.textBox2.TabIndex = 29;
+            this.tx_estudio.Location = new System.Drawing.Point(96, 95);
+            this.tx_estudio.Name = "tx_estudio";
+            this.tx_estudio.Size = new System.Drawing.Size(181, 20);
+            this.tx_estudio.TabIndex = 29;
             // 
-            // textBox1
+            // tx_titulo
             // 
-            this.textBox1.Location = new System.Drawing.Point(96, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 20);
-            this.textBox1.TabIndex = 28;
+            this.tx_titulo.Location = new System.Drawing.Point(96, 54);
+            this.tx_titulo.Name = "tx_titulo";
+            this.tx_titulo.Size = new System.Drawing.Size(181, 20);
+            this.tx_titulo.TabIndex = 28;
             // 
             // label3
             // 
@@ -409,7 +479,14 @@ namespace Cinealdia
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.tx_personaje);
+            this.tabPage2.Controls.Add(this.tx_apellidos);
+            this.tabPage2.Controls.Add(this.tx_nombre);
+            this.tabPage2.Controls.Add(this.btn_añadir);
+            this.tabPage2.Controls.Add(this.label15);
+            this.tabPage2.Controls.Add(this.label14);
+            this.tabPage2.Controls.Add(this.label13);
+            this.tabPage2.Controls.Add(this.gridactores);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -418,17 +495,101 @@ namespace Cinealdia
             this.tabPage2.Text = "Actores";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // tx_personaje
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(304, 32);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(380, 496);
-            this.dataGridView1.TabIndex = 0;
+            this.tx_personaje.Location = new System.Drawing.Point(230, 331);
+            this.tx_personaje.Name = "tx_personaje";
+            this.tx_personaje.Size = new System.Drawing.Size(181, 20);
+            this.tx_personaje.TabIndex = 55;
+            // 
+            // tx_apellidos
+            // 
+            this.tx_apellidos.Location = new System.Drawing.Point(229, 247);
+            this.tx_apellidos.Name = "tx_apellidos";
+            this.tx_apellidos.Size = new System.Drawing.Size(181, 20);
+            this.tx_apellidos.TabIndex = 54;
+            // 
+            // tx_nombre
+            // 
+            this.tx_nombre.Location = new System.Drawing.Point(229, 163);
+            this.tx_nombre.Name = "tx_nombre";
+            this.tx_nombre.Size = new System.Drawing.Size(181, 20);
+            this.tx_nombre.TabIndex = 53;
+            // 
+            // btn_añadir
+            // 
+            this.btn_añadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_añadir.Location = new System.Drawing.Point(239, 466);
+            this.btn_añadir.Name = "btn_añadir";
+            this.btn_añadir.Size = new System.Drawing.Size(137, 33);
+            this.btn_añadir.TabIndex = 52;
+            this.btn_añadir.Text = "Añadir";
+            this.btn_añadir.UseVisualStyleBackColor = true;
+            this.btn_añadir.Click += new System.EventHandler(this.btn_añadir_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(141, 334);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(83, 16);
+            this.label15.TabIndex = 28;
+            this.label15.Text = "Personaje:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(141, 251);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(78, 16);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "Apellidos:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(141, 167);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(67, 16);
+            this.label13.TabIndex = 26;
+            this.label13.Text = "Nombre:";
+            // 
+            // gridactores
+            // 
+            this.gridactores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridactores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre,
+            this.Apellidos,
+            this.Personaje});
+            this.gridactores.Location = new System.Drawing.Point(537, 60);
+            this.gridactores.Name = "gridactores";
+            this.gridactores.Size = new System.Drawing.Size(341, 439);
+            this.gridactores.TabIndex = 0;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Apellidos
+            // 
+            this.Apellidos.HeaderText = "Apellidos";
+            this.Apellidos.Name = "Apellidos";
+            this.Apellidos.ReadOnly = true;
+            // 
+            // Personaje
+            // 
+            this.Personaje.HeaderText = "Personaje";
+            this.Personaje.Name = "Personaje";
+            this.Personaje.ReadOnly = true;
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.textBox4);
+            this.tabPage3.Controls.Add(this.tx_comment);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -437,37 +598,56 @@ namespace Cinealdia
             this.tabPage3.Text = "Comentario";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // tx_comment
             // 
-            this.textBox4.Location = new System.Drawing.Point(6, 6);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(954, 560);
-            this.textBox4.TabIndex = 0;
+            this.tx_comment.Location = new System.Drawing.Point(6, 6);
+            this.tx_comment.Multiline = true;
+            this.tx_comment.Name = "tx_comment";
+            this.tx_comment.Size = new System.Drawing.Size(954, 560);
+            this.tx_comment.TabIndex = 0;
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // actoresBindingSource
+            // 
+            this.actoresBindingSource.DataMember = "actores";
+            this.actoresBindingSource.DataSource = this.aCTORESDataSet;
+            // 
+            // aCTORESDataSet
+            // 
+            this.aCTORESDataSet.DataSetName = "ACTORESDataSet";
+            this.aCTORESDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // actoresTableAdapter
+            // 
+            this.actoresTableAdapter.ClearBeforeFill = true;
+            // 
             // añadirPelicula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(998, 622);
             this.Controls.Add(this.tabControl1);
             this.MinimumSize = new System.Drawing.Size(900, 600);
             this.Name = "añadirPelicula";
             this.Text = "Añadir Pelicula";
+            this.Load += new System.EventHandler(this.añadirPelicula_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric_duracion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric_puntuacion)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridactores)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.actoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aCTORESDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -476,36 +656,55 @@ namespace Cinealdia
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cb_edad;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_tipo;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.CheckedListBox checked_generos;
+        private System.Windows.Forms.CheckBox ch_venta;
+        private System.Windows.Forms.CheckBox ch_quiero;
+        private System.Windows.Forms.CheckBox ch_vista;
+        private System.Windows.Forms.CheckBox ch_coleccion;
+        private System.Windows.Forms.NumericUpDown numeric_duracion;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numeric_puntuacion;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tx_año;
+        private System.Windows.Forms.TextBox tx_estudio;
+        private System.Windows.Forms.TextBox tx_titulo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridactores;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox tx_comment;
+        private System.Windows.Forms.PictureBox imagen;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label lb_error;
+        private System.Windows.Forms.Label lb_usuario;
+        private ACTORESDataSet aCTORESDataSet;
+        private System.Windows.Forms.BindingSource actoresBindingSource;
+        private ACTORESDataSetTableAdapters.actoresTableAdapter actoresTableAdapter;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox tx_director;
+        private System.Windows.Forms.TextBox tx_guionistas;
+        private System.Windows.Forms.TextBox tx_bso;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btn_añadir;
+        private System.Windows.Forms.TextBox tx_nombre;
+        private System.Windows.Forms.TextBox tx_apellidos;
+        private System.Windows.Forms.TextBox tx_personaje;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Personaje;
     }
 }

@@ -42,11 +42,11 @@ namespace Cinealdia
             this.panelMoviesSelect = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.btn_addmovie = new System.Windows.Forms.Button();
             this.btn_movies = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelTitulo = new System.Windows.Forms.Panel();
+            this.lb_usuario = new System.Windows.Forms.Label();
             this.lb_title = new System.Windows.Forms.Label();
             this.panel_principal = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
@@ -84,7 +84,7 @@ namespace Cinealdia
             this.button10.ForeColor = System.Drawing.Color.Gainsboro;
             this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button10.Location = new System.Drawing.Point(0, 565);
+            this.button10.Location = new System.Drawing.Point(0, 523);
             this.button10.Name = "button10";
             this.button10.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button10.Size = new System.Drawing.Size(250, 45);
@@ -102,7 +102,7 @@ namespace Cinealdia
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button9.Location = new System.Drawing.Point(0, 520);
+            this.button9.Location = new System.Drawing.Point(0, 478);
             this.button9.Name = "button9";
             this.button9.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button9.Size = new System.Drawing.Size(250, 45);
@@ -119,7 +119,7 @@ namespace Cinealdia
             this.panelSeriesSelect.Controls.Add(this.button7);
             this.panelSeriesSelect.Controls.Add(this.button8);
             this.panelSeriesSelect.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSeriesSelect.Location = new System.Drawing.Point(0, 355);
+            this.panelSeriesSelect.Location = new System.Drawing.Point(0, 313);
             this.panelSeriesSelect.Name = "panelSeriesSelect";
             this.panelSeriesSelect.Size = new System.Drawing.Size(250, 165);
             this.panelSeriesSelect.TabIndex = 5;
@@ -213,7 +213,7 @@ namespace Cinealdia
             this.btn_series.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_series.Image = ((System.Drawing.Image)(resources.GetObject("btn_series.Image")));
             this.btn_series.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_series.Location = new System.Drawing.Point(0, 310);
+            this.btn_series.Location = new System.Drawing.Point(0, 268);
             this.btn_series.Name = "btn_series";
             this.btn_series.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btn_series.Size = new System.Drawing.Size(250, 45);
@@ -228,12 +228,11 @@ namespace Cinealdia
             this.panelMoviesSelect.BackColor = System.Drawing.Color.CadetBlue;
             this.panelMoviesSelect.Controls.Add(this.button4);
             this.panelMoviesSelect.Controls.Add(this.button3);
-            this.panelMoviesSelect.Controls.Add(this.button2);
             this.panelMoviesSelect.Controls.Add(this.btn_addmovie);
             this.panelMoviesSelect.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMoviesSelect.Location = new System.Drawing.Point(0, 145);
             this.panelMoviesSelect.Name = "panelMoviesSelect";
-            this.panelMoviesSelect.Size = new System.Drawing.Size(250, 165);
+            this.panelMoviesSelect.Size = new System.Drawing.Size(250, 123);
             this.panelMoviesSelect.TabIndex = 3;
             // 
             // button4
@@ -246,7 +245,7 @@ namespace Cinealdia
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("FunSized", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button4.Location = new System.Drawing.Point(0, 120);
+            this.button4.Location = new System.Drawing.Point(0, 80);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(250, 40);
@@ -265,7 +264,7 @@ namespace Cinealdia
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("FunSized", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button3.Location = new System.Drawing.Point(0, 80);
+            this.button3.Location = new System.Drawing.Point(0, 40);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(250, 40);
@@ -273,25 +272,7 @@ namespace Cinealdia
             this.button3.Text = "lista peliculas";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("FunSized", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button2.Location = new System.Drawing.Point(0, 40);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(250, 40);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Borrar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btn_addmovie
             // 
@@ -349,12 +330,25 @@ namespace Cinealdia
             // panelTitulo
             // 
             this.panelTitulo.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panelTitulo.Controls.Add(this.lb_usuario);
             this.panelTitulo.Controls.Add(this.lb_title);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(250, 0);
             this.panelTitulo.Name = "panelTitulo";
             this.panelTitulo.Size = new System.Drawing.Size(1014, 100);
             this.panelTitulo.TabIndex = 1;
+            // 
+            // lb_usuario
+            // 
+            this.lb_usuario.AutoSize = true;
+            this.lb_usuario.Font = new System.Drawing.Font("FunSized", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_usuario.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lb_usuario.Location = new System.Drawing.Point(858, 73);
+            this.lb_usuario.Name = "lb_usuario";
+            this.lb_usuario.Size = new System.Drawing.Size(107, 24);
+            this.lb_usuario.TabIndex = 1;
+            this.lb_usuario.Text = "Usuario";
+            this.lb_usuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lb_title
             // 
@@ -407,7 +401,6 @@ namespace Cinealdia
         private System.Windows.Forms.Button btn_addmovie;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btn_series;
         private System.Windows.Forms.Panel panelSeriesSelect;
         private System.Windows.Forms.Button button5;
@@ -419,5 +412,6 @@ namespace Cinealdia
         private System.Windows.Forms.Panel panelTitulo;
         private System.Windows.Forms.Label lb_title;
         private System.Windows.Forms.Panel panel_principal;
+        private System.Windows.Forms.Label lb_usuario;
     }
 }
