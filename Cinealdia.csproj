@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\Descargas\MySql.Data.DLL</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ACTORESDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ACTORESDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="añadirpelicula.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,11 +73,29 @@
     <Compile Include="Bienvenida.Designer.cs">
       <DependentUpon>Bienvenida.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaPeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaPeliculas.Designer.cs">
+      <DependentUpon>ListaPeliculas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeliculaDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeliculaDetalles.Designer.cs">
+      <DependentUpon>PeliculaDetalles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="perfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="perfil.Designer.cs">
+      <DependentUpon>perfil.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -78,6 +105,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="proviDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>proviDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Registro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,8 +125,17 @@
     <EmbeddedResource Include="Bienvenida.resx">
       <DependentUpon>Bienvenida.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListaPeliculas.resx">
+      <DependentUpon>ListaPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeliculaDetalles.resx">
+      <DependentUpon>PeliculaDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="perfil.resx">
+      <DependentUpon>perfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -111,6 +152,17 @@
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ACTORESDataSet.xsc">
+      <DependentUpon>ACTORESDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ACTORESDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ACTORESDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ACTORESDataSet.xss">
+      <DependentUpon>ACTORESDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -120,6 +172,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="proviDataSet.xsc">
+      <DependentUpon>proviDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="proviDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>proviDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="proviDataSet.xss">
+      <DependentUpon>proviDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
