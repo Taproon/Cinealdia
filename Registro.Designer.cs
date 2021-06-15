@@ -29,6 +29,7 @@ namespace Cinealdia
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
             this.asterisco_pass = new System.Windows.Forms.Label();
             this.asterisco_nombre = new System.Windows.Forms.Label();
@@ -37,18 +38,31 @@ namespace Cinealdia
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.asterisco_mail = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tx_mail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.asterisco_provincia = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_prov = new System.Windows.Forms.ComboBox();
+            this.provinciasBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this._5tueH5qnuVDataSet1 = new Cinealdia._5tueH5qnuVDataSet1();
+            this.provinciasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.proviDataSet = new Cinealdia.proviDataSet();
+            this.provinciasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.asterisco_fecha = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.date_fecha = new System.Windows.Forms.DateTimePicker();
             this.btn_registro = new System.Windows.Forms.Button();
             this.lb_error = new System.Windows.Forms.Label();
             this.lb_correcto = new System.Windows.Forms.Label();
+            this.lb_error_ocupado = new System.Windows.Forms.Label();
+            this.provinciasTableAdapter = new Cinealdia.proviDataSetTableAdapters.provinciasTableAdapter();
+            this.provinciasTableAdapter1 = new Cinealdia._5tueH5qnuVDataSet1TableAdapters.provinciasTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.provinciasBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._5tueH5qnuVDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provinciasBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proviDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provinciasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,14 +96,15 @@ namespace Cinealdia
             this.tx_pass.Name = "tx_pass";
             this.tx_pass.PasswordChar = '*';
             this.tx_pass.Size = new System.Drawing.Size(141, 20);
-            this.tx_pass.TabIndex = 12;
+            this.tx_pass.TabIndex = 5;
             // 
             // tx_user
             // 
             this.tx_user.Location = new System.Drawing.Point(208, 50);
             this.tx_user.Name = "tx_user";
             this.tx_user.Size = new System.Drawing.Size(141, 20);
-            this.tx_user.TabIndex = 11;
+            this.tx_user.TabIndex = 1;
+            this.tx_user.Leave += new System.EventHandler(this.tx_user_Leave);
             // 
             // label2
             // 
@@ -125,12 +140,12 @@ namespace Cinealdia
             this.asterisco_mail.TabIndex = 17;
             this.asterisco_mail.Text = "*";
             // 
-            // textBox1
+            // tx_mail
             // 
-            this.textBox1.Location = new System.Drawing.Point(208, 89);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 20);
-            this.textBox1.TabIndex = 16;
+            this.tx_mail.Location = new System.Drawing.Point(208, 89);
+            this.tx_mail.Name = "tx_mail";
+            this.tx_mail.Size = new System.Drawing.Size(141, 20);
+            this.tx_mail.TabIndex = 2;
             // 
             // label4
             // 
@@ -166,13 +181,36 @@ namespace Cinealdia
             this.label6.TabIndex = 18;
             this.label6.Text = "Provincia:";
             // 
-            // comboBox1
+            // cb_prov
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(209, 128);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(140, 21);
-            this.comboBox1.TabIndex = 21;
+            this.cb_prov.DataSource = this.provinciasBindingSource2;
+            this.cb_prov.DisplayMember = "provincia";
+            this.cb_prov.FormattingEnabled = true;
+            this.cb_prov.Location = new System.Drawing.Point(209, 128);
+            this.cb_prov.Name = "cb_prov";
+            this.cb_prov.Size = new System.Drawing.Size(140, 21);
+            this.cb_prov.TabIndex = 3;
+            this.cb_prov.ValueMember = "id";
+            // 
+            // provinciasBindingSource2
+            // 
+            this.provinciasBindingSource2.DataMember = "provincias";
+            this.provinciasBindingSource2.DataSource = this._5tueH5qnuVDataSet1;
+            // 
+            // _5tueH5qnuVDataSet1
+            // 
+            this._5tueH5qnuVDataSet1.DataSetName = "_5tueH5qnuVDataSet1";
+            this._5tueH5qnuVDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // provinciasBindingSource1
+            // 
+            this.provinciasBindingSource1.DataMember = "provincias";
+            this.provinciasBindingSource1.DataSource = this.proviDataSet;
+            // 
+            // proviDataSet
+            // 
+            this.proviDataSet.DataSetName = "proviDataSet";
+            this.proviDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // fileSystemWatcher1
             // 
@@ -202,13 +240,13 @@ namespace Cinealdia
             this.label8.TabIndex = 22;
             this.label8.Text = "Fecha Nacimiento:";
             // 
-            // dateTimePicker1
+            // date_fecha
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(208, 167);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(141, 20);
-            this.dateTimePicker1.TabIndex = 24;
+            this.date_fecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.date_fecha.Location = new System.Drawing.Point(208, 167);
+            this.date_fecha.Name = "date_fecha";
+            this.date_fecha.Size = new System.Drawing.Size(141, 20);
+            this.date_fecha.TabIndex = 4;
             // 
             // btn_registro
             // 
@@ -218,9 +256,10 @@ namespace Cinealdia
             this.btn_registro.Location = new System.Drawing.Point(173, 272);
             this.btn_registro.Name = "btn_registro";
             this.btn_registro.Size = new System.Drawing.Size(107, 38);
-            this.btn_registro.TabIndex = 25;
+            this.btn_registro.TabIndex = 6;
             this.btn_registro.Text = "REGISTRO";
             this.btn_registro.UseVisualStyleBackColor = true;
+            this.btn_registro.Click += new System.EventHandler(this.btn_registro_Click);
             // 
             // lb_error
             // 
@@ -246,6 +285,26 @@ namespace Cinealdia
             this.lb_correcto.TabIndex = 27;
             this.lb_correcto.Text = "El nombre de usuario está disponible";
             // 
+            // lb_error_ocupado
+            // 
+            this.lb_error_ocupado.AutoSize = true;
+            this.lb_error_ocupado.BackColor = System.Drawing.Color.Transparent;
+            this.lb_error_ocupado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_error_ocupado.ForeColor = System.Drawing.Color.Red;
+            this.lb_error_ocupado.Location = new System.Drawing.Point(148, 21);
+            this.lb_error_ocupado.Name = "lb_error_ocupado";
+            this.lb_error_ocupado.Size = new System.Drawing.Size(155, 16);
+            this.lb_error_ocupado.TabIndex = 28;
+            this.lb_error_ocupado.Text = "El nombre está ocupado";
+            // 
+            // provinciasTableAdapter
+            // 
+            this.provinciasTableAdapter.ClearBeforeFill = true;
+            // 
+            // provinciasTableAdapter1
+            // 
+            this.provinciasTableAdapter1.ClearBeforeFill = true;
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,17 +312,18 @@ namespace Cinealdia
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(423, 476);
+            this.Controls.Add(this.lb_error_ocupado);
             this.Controls.Add(this.lb_correcto);
             this.Controls.Add(this.lb_error);
             this.Controls.Add(this.btn_registro);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.date_fecha);
             this.Controls.Add(this.asterisco_fecha);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cb_prov);
             this.Controls.Add(this.asterisco_provincia);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.asterisco_mail);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tx_mail);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.asterisco_pass);
             this.Controls.Add(this.asterisco_nombre);
@@ -277,6 +337,11 @@ namespace Cinealdia
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cinealdia";
             this.Load += new System.EventHandler(this.Registro_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.provinciasBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._5tueH5qnuVDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provinciasBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proviDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provinciasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -292,17 +357,25 @@ namespace Cinealdia
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label asterisco_mail;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tx_mail;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label asterisco_provincia;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_prov;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Label asterisco_fecha;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker date_fecha;
         private System.Windows.Forms.Button btn_registro;
         private System.Windows.Forms.Label lb_error;
         private System.Windows.Forms.Label lb_correcto;
+        private System.Windows.Forms.Label lb_error_ocupado;
+        private System.Windows.Forms.BindingSource provinciasBindingSource;
+        private proviDataSet proviDataSet;
+        private System.Windows.Forms.BindingSource provinciasBindingSource1;
+        private proviDataSetTableAdapters.provinciasTableAdapter provinciasTableAdapter;
+        private _5tueH5qnuVDataSet1 _5tueH5qnuVDataSet1;
+        private System.Windows.Forms.BindingSource provinciasBindingSource2;
+        private _5tueH5qnuVDataSet1TableAdapters.provinciasTableAdapter provinciasTableAdapter1;
     }
 }
